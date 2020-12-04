@@ -16,7 +16,7 @@ int main()
 
 size = expense.size();
 
-//two entries
+
     for(i = 0; i < size; i++)
         for(j = i; j < size; j++)
             {
@@ -26,7 +26,6 @@ size = expense.size();
                 }
             }
 
-//three entries
     for(i = 0; i < size; i++)
         for(j = i; j < size; j++)
             for(m = j; m < size; m++)
