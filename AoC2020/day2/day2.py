@@ -25,4 +25,4 @@ for line in inputFile:
     if (string[minChar - 1] == reqChar) ^ (string[maxChar - 1] == reqChar):
         key2 +=1
 
-print("Key1 : {}, Key2 : {}".format(key1, key2))
+print("Task1 : {}\nTask2 : {}".format(key1, key2))

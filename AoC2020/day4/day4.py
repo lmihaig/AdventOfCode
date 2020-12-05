@@ -35,5 +35,5 @@ for passport in passports:
 
     
 
-print(valid)
-print(valid2)
+print("Task1: ", valid)
+print("Task2: ", valid2)

@@ -23,6 +23,6 @@ for (rightStep,downStep) in slopes:
         y += rightStep
         x += downStep
     key *= trees
-    print(trees)
+    print("Trees for slope ({},{}): {}".format(rightStep, downStep, trees))
 
-print(key)
+print("Task2: ", key)

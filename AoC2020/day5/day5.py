@@ -18,9 +18,9 @@ for value in inputFile:
             firstColumn = ((firstColumn + lastColumn) // 2) + 1
     seats.append(firstRow * 8 + firstColumn)
 
-print(max(seats))
+print("Task1:", max(seats))
 
 for i in range(min(seats),max(seats)):
     if i not in seats:
-        print(i)
+        print("Task2:", i)
 

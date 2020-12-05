@@ -22,7 +22,7 @@ size = expense.size();
             {
                 if(expense[i]+expense[j] == 2020) 
                 {
-                    cout<<expense[i]*expense[j]<<'\n';
+                    cout<<"Task1: "<<expense[i]*expense[j]<<'\n';
                 }
             }
 
@@ -32,7 +32,7 @@ size = expense.size();
             {
                 if(expense[i]+expense[j]+expense[m] == 2020) 
                 {
-                    cout<<expense[i]*expense[j]*expense[m]<<'\n';
+                    cout<<"Task2: "<<expense[i]*expense[j]*expense[m]<<'\n';
                 }
             }      
 }
