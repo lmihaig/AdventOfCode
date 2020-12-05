@@ -7,7 +7,6 @@ for value in inputFile:
     lastRow = 127
     firstColumn = 0
     lastColumn = 7
-    columns = list(range(0,7))
     for letter in value:
         if letter == 'F':
             lastRow = (firstRow + lastRow) // 2
