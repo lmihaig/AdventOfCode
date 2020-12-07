@@ -8,11 +8,11 @@ containedIn = {}
 holds = []
 
 def isContainedIn(colour):
-        for i in containedIn[colour]:
-            if i not in holds:
-                holds.append(i)
-            if i in containedIn:
-                isContainedIn(i)
+    for i in containedIn[colour]:
+        if i not in holds:
+            holds.append(i)
+        if i in containedIn:
+            isContainedIn(i)
 
 def countBags(colour):
     counter = 0
@@ -25,8 +25,10 @@ def countBags(colour):
 for line in lines:
     container = re.match("(.*) bags contain", line)[1]
     contains = re.findall("([0-9]) (.*?) bags?[, .]", line)
+    
     for numBags, containedColour in contains:
         numBags = int(numBags)
+
         if containedColour not in containedIn:
             containedIn[containedColour] = []
         containedIn[containedColour].append(container)
