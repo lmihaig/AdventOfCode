@@ -1,11 +1,12 @@
 import re
-inputFile = open("day4.txt", mode="r") 
+inputFile = open("day4.txt", mode="r")
 
 valid = 0
 valid2 = 0
-fields = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'] #'cid'
+fields = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid']  # 'cid'
 
 passports = inputFile.read().split('\n\n')
+
 
 def validare(passportDict):
     ok = False
@@ -14,12 +15,13 @@ def validare(passportDict):
             if re.compile("[0-9]").match(passportDict["eyr"]) and 2020 <= int(passportDict["eyr"]) <= 2030:
                 if re.compile("^#[0-9a-f]{6}$").match(passportDict["hcl"]):
                     if passportDict["ecl"] in ["amb", "blu", "brn", "gry", "grn", "hzl", "oth"]:
-                        if re.compile("^\d{9}$").match(passportDict["pid"]):
-                            if "in" in passportDict["hgt"] and 59 <= int(passportDict["hgt"][:-2]) <= 76: 
+                        if re.compile(r"^\d{9}$").match(passportDict["pid"]):
+                            if "in" in passportDict["hgt"] and 59 <= int(passportDict["hgt"][:-2]) <= 76:
                                 ok = True
-                            elif "cm" in passportDict["hgt"] and 150 <= int(passportDict["hgt"][:-2]) <= 193: 
+                            elif "cm" in passportDict["hgt"] and 150 <= int(passportDict["hgt"][:-2]) <= 193:
                                 ok = True
     return ok
+
 
 for passport in passports:
     passportDict = {}
@@ -33,7 +35,6 @@ for passport in passports:
         if validare(passportDict):
             valid2 += 1
 
-    
 
 print("Task1: ", valid)
 print("Task2: ", valid2)
