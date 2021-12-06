@@ -1,1 +1,0 @@
-inputFile = open("day15.txt", mode="r")
