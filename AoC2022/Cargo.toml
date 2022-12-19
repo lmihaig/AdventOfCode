@@ -5,5 +5,9 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+id_tree = "1.8.0"
 itertools = "0.10.5"
+pathfinding = "4.0.0"
 scan_fmt = "0.2.6"
+serde = {version= "1.0.151", features=["derive"] }
+serde_json = "1.0.91"
