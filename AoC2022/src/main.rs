@@ -29,7 +29,7 @@ fn read_input(day: usize) -> String {
     std::fs::read_to_string(format!("data/day{:0>2}.txt", day)).unwrap()
 }
 fn main() {
-    let day = 14;
-    println!("Part1: {}", day14::part1(read_input(day)));
-    println!("Part2: {}", day14::part2(read_input(day)));
+    let day = 15;
+    println!("Part1: {}", day15::part1(read_input(day)));
+    println!("Part2: {}", day15::part2(read_input(day)));
 }
